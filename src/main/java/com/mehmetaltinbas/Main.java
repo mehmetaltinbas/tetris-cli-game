@@ -24,7 +24,7 @@ public class Main {
             // for quick testing
             // String actionsInput = "T T R T L T";
             // String piecesInput = "I J O";
-            String actionsInput = "T T T T T T T T";
+            String actionsInput = "T T T T L L L T T T L L L T T T L T";
             String piecesInput = "I J O";
             List<TetrisAction> actions = TetrisTextInput.parseActions(actionsInput);
             List<TetrominoType> nextTetrominoes = TetrisTextInput.parseTetrominoes(piecesInput);

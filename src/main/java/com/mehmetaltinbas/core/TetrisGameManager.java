@@ -18,6 +18,7 @@ public class TetrisGameManager {
         game.startGame();
 
         for (TetrisAction action : actions) {
+            System.out.println("currentAction: " + action);
             if (!game.resolveAction(action)) {
                 break;
             }
