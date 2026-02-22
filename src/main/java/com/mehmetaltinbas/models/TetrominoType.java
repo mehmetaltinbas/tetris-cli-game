@@ -1,6 +1,6 @@
 package com.mehmetaltinbas.models;
 
-public enum Tetrominoes {
+public enum TetrominoType {
     Z,
     S,
     L,

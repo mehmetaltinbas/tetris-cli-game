@@ -1,7 +1,7 @@
 package com.mehmetaltinbas.ui;
 
 import com.mehmetaltinbas.models.TetrisAction;
-import com.mehmetaltinbas.models.Tetrominoes;
+import com.mehmetaltinbas.models.TetrominoType;
 
 import java.util.*;
 
@@ -21,18 +21,18 @@ public class TetrisTextInput {
         return actions;
     }
 
-    public static List<Tetrominoes> parseTetrominoes(String tetrominoesString) {
-        ArrayList<Tetrominoes> tetrominoes = new ArrayList<>();
+    public static List<TetrominoType> parseTetrominoes(String tetrominoesString) {
+        ArrayList<TetrominoType> tetrominoes = new ArrayList<>();
 
         for (String tetrominoString : tetrominoesString.split(" ")) {
             switch (tetrominoString) {
-                case "T" -> tetrominoes.add(Tetrominoes.T);
-                case "O" -> tetrominoes.add(Tetrominoes.O);
-                case "S" -> tetrominoes.add(Tetrominoes.S);
-                case "Z" -> tetrominoes.add(Tetrominoes.Z);
-                case "I" -> tetrominoes.add(Tetrominoes.I);
-                case "J" -> tetrominoes.add(Tetrominoes.J);
-                case "L" -> tetrominoes.add(Tetrominoes.L);
+                case "T" -> tetrominoes.add(TetrominoType.T);
+                case "O" -> tetrominoes.add(TetrominoType.O);
+                case "S" -> tetrominoes.add(TetrominoType.S);
+                case "Z" -> tetrominoes.add(TetrominoType.Z);
+                case "I" -> tetrominoes.add(TetrominoType.I);
+                case "J" -> tetrominoes.add(TetrominoType.J);
+                case "L" -> tetrominoes.add(TetrominoType.L);
             }
         }
         return tetrominoes;

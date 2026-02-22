@@ -78,7 +78,9 @@ public abstract class TetrisGame {
                 }
             }
         }
+
         drawScreen();
+
         return true;
     }
 

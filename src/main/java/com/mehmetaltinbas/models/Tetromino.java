@@ -9,6 +9,7 @@ public class Tetromino {
         this.tetrominoMap = new boolean[scale][scale];
 
         boolean[][] otherTetrominoMap = otherTetromino.getTetrominoMap();
+
         for (int i = 0; i < scale; i++) {
             for (int j=0; j < scale; j++) {
                 tetrominoMap[i][j] = otherTetrominoMap[i][j];
