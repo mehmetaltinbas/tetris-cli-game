@@ -12,8 +12,9 @@ import java.util.*;
 public class TetrisFactory {
     public static TetrisGameManager createTetrisGameManager(List<TetrisAction> debugActions, List<TetrominoShape> debugTetrominoes) {
         System.out.println("Allowed keyboard actions:");
-        System.out.println("\t- move tetromino left: key 'q' or left arrow key");
-        System.out.println("\t- move tetromino right: key 'e' or right arrow key");
+        System.out.println("\t- move tetromino left: key 'a' or left arrow key");
+        System.out.println("\t- move tetromino right: key 'd' or right arrow key");
+        System.out.println("\t- force gravity: key 's' or down arrow key");
         System.out.println("\t- rotate tetromino: key 'r'");
         System.out.println("\t- quit the game: key 'esc'");
         System.out.println();

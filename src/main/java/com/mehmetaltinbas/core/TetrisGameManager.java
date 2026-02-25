@@ -86,17 +86,34 @@ public class TetrisGameManager {
                                     actionQueue.add(TetrisAction.Left);
                                     if (isDebugging) System.out.println("Left Arrow");
                                 }
+
+                                if (arrowCode == 66) {
+                                    actionQueue.add(TetrisAction.Tick);
+                                    if (isDebugging) System.out.println("Down Arrow");
+                                }
                             }
                             break;
-                        case 113: // 'q'
-                            actionQueue.add(TetrisAction.Left);
-                            if (isDebugging) System.out.println("Action: Left");
-                            break;
-                        case 101: // 'e'
+
+                        case 'd':
+                        case 'D':
                             actionQueue.add(TetrisAction.Right);
                             if (isDebugging) System.out.println("Action: Right");
                             break;
-                        case 114: // 'r'
+
+                        case 'a':
+                        case 'A':
+                            actionQueue.add(TetrisAction.Left);
+                            if (isDebugging) System.out.println("Action: Left");
+                            break;
+
+                        case 's':
+                        case 'S':
+                            actionQueue.add(TetrisAction.Tick);
+                            if (isDebugging) System.out.println("Action: Tick");
+                            break;
+
+                        case 'r':
+                        case 'R':
                             actionQueue.add(TetrisAction.Rotate);
                             if (isDebugging) System.out.println("Action: Rotate");
                             break;
