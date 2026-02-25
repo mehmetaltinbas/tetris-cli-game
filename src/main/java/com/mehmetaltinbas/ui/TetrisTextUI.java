@@ -4,7 +4,7 @@ import com.mehmetaltinbas.core.TetrisMap;
 
 public class TetrisTextUI implements TetrisUI {
     @Override
-    public void draw(TetrisMap tetrisMap) {
+    public void draw(TetrisMap tetrisMap, int score) {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("  *");
         for (int j = 0; j < tetrisMap.getWidth(); j++) {
@@ -30,11 +30,15 @@ public class TetrisTextUI implements TetrisUI {
         stringBuilder.append("*");
         stringBuilder.append(System.lineSeparator());
 
+        stringBuilder.append("Score: ").append(score);
+        stringBuilder.append(System.lineSeparator());
+
         System.out.println(stringBuilder);
     }
 
     @Override
-    public void gameLost() {
+    public void gameLost(int score) {
         System.out.println("Game Lost !!!");
+        System.out.println("Final Score: " + score);
     }
 }

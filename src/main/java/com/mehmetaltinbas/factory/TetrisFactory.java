@@ -17,6 +17,8 @@ public class TetrisFactory {
         System.out.println("\t- rotate tetromino: key 'r'");
         System.out.println("\t- quit the game: key 'esc'");
         System.out.println();
+        System.out.println("Every row completion gives 10 points");
+        System.out.println();
 
         Scanner scanner = new Scanner(System.in);
 

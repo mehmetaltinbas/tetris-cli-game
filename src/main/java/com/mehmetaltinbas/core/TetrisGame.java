@@ -19,6 +19,7 @@ public class TetrisGame {
     protected int currentTetrominoStartRow;
     protected int currentTetrominoStartColumn;
     protected Set<Cell> currentTetrominoOccupiedCells = new HashSet<>();
+    protected int score = 0;
 
     private TetrisGame() {
     }
@@ -35,11 +36,11 @@ public class TetrisGame {
             }
         }
 
-        ui.draw(map);
+        ui.draw(map, score);
     }
 
     private void gameLost() {
-        ui.gameLost();
+        ui.gameLost(score);
     }
 
     protected Tetromino getRandomTetromino() {
@@ -347,6 +348,7 @@ public class TetrisGame {
 
         for (int row : currentTetrominoOccupiedRows) {
             if (isRowComplete(row)) {
+                score += 10;
                 completedRows.add(row);
                 unOccupyCompletedRow(row);
             }
